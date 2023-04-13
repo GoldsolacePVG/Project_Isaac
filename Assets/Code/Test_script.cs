@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Test_script : MonoBehaviour
 {
+    public bool JDNOMEHAGASBULLYING;
     public int count_down;
     public int health;
     // Start is called before the first frame update

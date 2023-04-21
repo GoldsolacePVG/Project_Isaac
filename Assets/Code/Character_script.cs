@@ -18,8 +18,6 @@ public class Character_script : MonoBehaviour{
     void Update(){
         movDir_.z = Input.GetAxis("Vertical");
         movDir_.x = Input.GetAxis("Horizontal");
-        // movDir_.y = 0.0f;
-        // movDir_.Normalize();
 
         tr_.Translate(movDir_ * speed_ * Time.deltaTime);
     }

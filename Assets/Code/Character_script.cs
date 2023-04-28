@@ -6,7 +6,7 @@ public class Character_script : MonoBehaviour{
 
     public int health = 100;
     public Transform tr_ = null;
-    public float speed_ = 5f;
+    public float speed_ = 10f;
     private Vector3 movDir_;
 
     // Start is called before the first frame update
@@ -19,6 +19,12 @@ public class Character_script : MonoBehaviour{
         movDir_.z = Input.GetAxis("Vertical");
         movDir_.x = Input.GetAxis("Horizontal");
 
-        tr_.Translate(movDir_ * speed_ * Time.deltaTime);
+        tr_.position = tr_.position + (movDir_ * speed_ * Time.deltaTime);
+        
+        movDir_.Normalize();
+        if(movDir_.z != 0.0f || movDir_.x != 0.0f){
+            tr_.forward = movDir_;
+        }
+
     }
 }

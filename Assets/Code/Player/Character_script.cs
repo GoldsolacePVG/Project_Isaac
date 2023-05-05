@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Character_script : MonoBehaviour{
-
-    public int health = 100;
+    
     public Transform tr_ = null;
     public float speed_ = 10f;
     private Vector3 movDir_;

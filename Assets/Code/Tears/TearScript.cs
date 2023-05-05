@@ -5,7 +5,7 @@ using UnityEngine;
 public class TearScript : MonoBehaviour
 {
     public GameObject TearPrefab_;
-    public int impulse_ = 10;
+    public int impulse_ = 50;
     private Transform tr_;
     // Start is called before the first frame update
     void Start(){
@@ -17,7 +17,6 @@ public class TearScript : MonoBehaviour
         if(Input.GetButtonDown("Fire2")){
             Fire();
         }
-        
     }
 
     void Fire(){

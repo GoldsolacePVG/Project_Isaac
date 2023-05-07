@@ -11,7 +11,7 @@ public class EnemyCollision : MonoBehaviour
         gc = collision.gameObject.GetComponent<PlayerController>();
 
         if(gc != null){
-            gc.TakeDamage(damage_);
+            gc.TakePlayerDamage(damage_);
         }
     }
 }

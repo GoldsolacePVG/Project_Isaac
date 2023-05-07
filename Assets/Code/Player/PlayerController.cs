@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int value){
+    public void TakePlayerDamage(int value){
         if(!is_immortal_){
             is_immortal_ = true;
             Debug.Log(gameObject.name + " says: OUCH! I received " + value + " damage, and I have " + lives_ + " lives");

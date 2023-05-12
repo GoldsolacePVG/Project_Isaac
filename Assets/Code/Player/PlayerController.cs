@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public int lives_ = 3;
+    public Image[] heart;
     private bool is_immortal_ = false;
     private float immortal_counter = 100.0f;
 
@@ -21,8 +23,8 @@ public class PlayerController : MonoBehaviour
     public void TakePlayerDamage(int value){
         if(!is_immortal_){
             is_immortal_ = true;
-            Debug.Log(gameObject.name + " says: OUCH! I received " + value + " damage, and I have " + lives_ + " lives");
             lives_ -= value;
+            heart[lives_].enabled = false;
             if(lives_ <= 0){
                 lives_ = 0;
                 Destroy(gameObject);

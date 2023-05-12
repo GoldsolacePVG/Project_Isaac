@@ -8,15 +8,13 @@ public class TearColScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision){
         EnemyController gc = null;
-        RoomCollision rc = null;
         gc = collision.gameObject.GetComponent<EnemyController>();
-        rc = collision.gameObject.GetComponent<RoomCollision>();
 
         if(gc != null){
             gc.TakeDamage(damage_);
             Destroy(gameObject);
         }
-        if(rc != null){
+        if(collision.gameObject.CompareTag("Wall")){
             Destroy(gameObject);
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public Transform player_tr;
+    public GameObject player;
     public float speed_ = 6.0f;
 
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class EnemyScript : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        transform.LookAt(player_tr);
-        transform.position = Vector3.MoveTowards(transform.position, player_tr.position, speed_ * Time.deltaTime);
+        transform.LookAt(player.transform);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed_ * Time.deltaTime);
     }
 }

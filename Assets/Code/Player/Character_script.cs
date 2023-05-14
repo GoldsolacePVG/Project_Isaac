@@ -7,6 +7,7 @@ public class Character_script : MonoBehaviour{
     public Transform tr_ = null;
     public float speed_ = 10f;
     private Vector3 movDir_;
+    public int level = 1;
 
     // Start is called before the first frame update
     void Start(){

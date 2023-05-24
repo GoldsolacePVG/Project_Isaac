@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
             if(lives_ <= 0){
                 lives_ = 0;
                 Destroy(gameObject);
+                SceneManager.LoadScene(2);
             }
         }
     }

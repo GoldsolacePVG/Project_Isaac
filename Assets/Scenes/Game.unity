@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 1637470487027498303, guid: 6fb77030155e7754996fd21e56d17d4a,
     type: 3}
-  next: 0
+  is_active: 0
 --- !u!1 &1146068595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 1637470487027498303, guid: 6fb77030155e7754996fd21e56d17d4a,
     type: 3}
-  next: 0
+  is_active: 0
 --- !u!1001 &1375871499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2489,6 +2489,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714112865}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1722641726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1722641727}
+  m_Layer: 0
+  m_Name: Player_spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1722641727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722641726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 264.02, y: 1.24, z: 14.53}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1728373669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,6 +2531,7 @@ GameObject:
   - component: {fileID: 1728373672}
   - component: {fileID: 1728373671}
   - component: {fileID: 1728373670}
+  - component: {fileID: 1728373674}
   m_Layer: 0
   m_Name: Door_2
   m_TagString: Wall
@@ -2519,8 +2550,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2749662, y: 1, z: 1}
+  m_Center: {x: 0.13748334, y: 0, z: 0}
 --- !u!23 &1728373671
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2585,6 +2616,23 @@ Transform:
   m_Father: {fileID: 507627512}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1728373674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728373669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223a0622d4624414098750589b65ebd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn_tr: {fileID: 1722641727}
+  pl_: {fileID: 31163974}
+  sp1_: {fileID: 2022292610}
+  sp2_: {fileID: 1267884648}
+  sp3_: {fileID: 1060221497}
 --- !u!4 &1778069385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5182199918533220257, guid: 22f72f122dfecfe41bc301f345b57a5d,
@@ -2784,7 +2832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 1637470487027498303, guid: 6fb77030155e7754996fd21e56d17d4a,
     type: 3}
-  next: 0
+  is_active: 0
 --- !u!1 &2048305215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,6 +3033,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 570735020881586637, guid: b71c7bc46353ca444b60042bc6126769,
+        type: 3}
+      propertyPath: go
+      value: 
+      objectReference: {fileID: 1637470487027498303, guid: 6fb77030155e7754996fd21e56d17d4a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b71c7bc46353ca444b60042bc6126769, type: 3}
 --- !u!1001 &1637470486259074022

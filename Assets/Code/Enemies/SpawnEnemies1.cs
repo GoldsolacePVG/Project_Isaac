@@ -6,8 +6,7 @@ public class SpawnEnemies1 : MonoBehaviour
 {
     public GameObject EnemyPrefab;
     private Transform tr_;
-    public bool next = false;
-    private bool is_active = false;
+    public bool is_active = false;
     private int count_down = 100;
 
     // Start is called before the first frame update
@@ -23,7 +22,6 @@ public class SpawnEnemies1 : MonoBehaviour
             CreateEnemies();
             count_down--;
             if(count_down <= 0){
-                next = true;
                 count_down = 0;
             }
         }

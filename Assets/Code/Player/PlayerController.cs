@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
             immortal_counter = 100.0f;
             is_immortal_ = false;
         }
+        for(int i = 0; i < lives_; i++){
+            heart[i].enabled = true;
+        }
     }
 
     public void TakePlayerDamage(int value){
@@ -31,6 +34,17 @@ public class PlayerController : MonoBehaviour
                 Destroy(gameObject);
                 SceneManager.LoadScene(2);
             }
+        }
+    }
+
+    public void TakePlayerBossDamage(){
+        if(!is_immortal_){
+            lives_ = 0;
+            for(int i = 0; i < lives_; i++){
+                heart[i].enabled = false;
+            }
+            Destroy(gameObject);
+            SceneManager.LoadScene(2);
         }
     }
 }

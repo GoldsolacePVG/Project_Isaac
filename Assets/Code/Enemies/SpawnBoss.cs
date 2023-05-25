@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnEnemies1 : MonoBehaviour
+public class SpawnBoss : MonoBehaviour
 {
-    public GameObject EnemyPrefab;
+    public GameObject BossPrefab;
     private Transform tr_;
-    public bool is_active = false;
+    public bool is_active = true;
 
     // Start is called before the first frame update
     void Start(){
@@ -16,12 +16,12 @@ public class SpawnEnemies1 : MonoBehaviour
     // Update is called once per frame
     void Update(){
         if(!is_active){
-            CreateEnemies();
+            CreateBoss();
         }
     }
 
-    void CreateEnemies(){
-        GameObject en = Instantiate<GameObject>(EnemyPrefab, tr_.position, tr_.rotation);
+    void CreateBoss(){
+        GameObject gc = Instantiate<GameObject>(BossPrefab, tr_.position, tr_.rotation);
         is_active = true;
     }
 }
